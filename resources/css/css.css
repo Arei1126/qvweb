@@ -1,0 +1,97 @@
+body{
+	margin: 0px;
+	overflow: auto;
+	display: auto;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content:  space-around;
+	align-items: center;
+	font-size: large;
+	background-color: #222222;
+	color: white;
+
+}
+
+#close{
+	border: none;
+    background: none;
+    font-size: x-large;
+}
+
+#image_dialog{
+	width: 80%;
+}
+
+dialog[open] {
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 16px rgba(0 0 0 / 16%);
+
+}
+
+dialog::backdrop {
+  background: rgba(0 0 0 / 32%);
+}
+
+.canvas_thumnail{
+	margin: 0.2%;
+}
+.full_image_canvas{
+	width: 100%;
+}
+
+#intro {
+    margin-top: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+#thumnail_tile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.loader {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#howmany{
+	display: none;
+}
+#grain{
+	display: none;
+}
+#baudRate{
+	display: none;
+}
+#blksize{
+	display: none;
+}
+
+#gett{
+	display: none;
+}
+
+#getf{
+	display: none;
+}
+
+
+#ack{
+	display: none;
+}
+
+#read{
+	display: none;
+}

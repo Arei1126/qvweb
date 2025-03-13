@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="manifest" href="./manifest.json" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Title</title>
+	</head>
+	<body>
+		<a id="intro">Click here, then select your serial port</a>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+		<link type="text/css" rel="stylesheet" href="./resources/css/css.css">
+		<script type="module" src="./resources/scripts/script.js"></script>
+
+		<input id="grain" type="number" min="0" max="255" value = "0"/>
+		<!--<label for="no">Number of Image you want</label>-->
+		<button id="howmany">howmany</button>
+		<button id="getf">get image</button>
+		<button id="ack">ACK</button>
+		<button id="blksize">change block size</button>
+		<button id="baudRate">change baud rate</button>
+		<button id="read">read</button>
+		<button id="gett">get thumnail</button> 
+
+		<div id="thumnail_tile"></div>
+		<dialog id="image_dialog">
+			<form method="dialog">
+				<button id="close">
+					<span class="material-symbols-outlined">
+						close
+					</span>
+				</button>
+			</form>
+			<canvas id="image_canvas"></canvas>
+		</dialog>
+		<dialog id="loading">
+			<a>Loading...</a>
+			<input readonly id="no" type="number" min="1" max="100" value = "1"/>
+			<!--
+			<span class="material-symbols-outlined loader">
+				progress_activity
+			</span>
+			-->
+
+		</dialog>
+					</body>
+	<script>
+		if ("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("./sw.js").then(
+				(registration) => {
+					console.log("Service worker registration successful:", registration);
+					registration.addEventListener("updatefound", () =>{
+						console.warn("New sw available");
+						registration.update();
+					});
+				},
+				(error) => {
+					console.error(`Service worker registration failed: ${error}`);
+				},
+			);
+		} else {
+			console.error("Service workers are not supported.");
+		}
+	</script>	
+
+
+</html>

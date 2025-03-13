@@ -1,9 +1,9 @@
 {
-	"name": "serialportTest",
-	"description":"The template for pwa" ,
-	"short_name": "serialPortTset",
+	"name": "qvweb",
+	"description":"image viewer for qv-10" ,
+	"short_name": "qvweb",
 	"start_url" : "./index.html",
-	"id": "serialPortTest",
+	"id": "qvweb",
 	"scope": "./",
 	"display": "standalone",
 	"theme_color": "#ffffff",
